@@ -1,0 +1,55 @@
+<load file="Common/head.html" />
+<body class="home blog">
+<load file="Common/header.html" />
+<section id="zan-bodyer">
+  <div class="container">
+    <section class="row">
+      <section id="mainstay" class="col-md-8">
+        <div id="ie-warning" class="alert alert-danger fade in">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <i class="fa fa-warning"></i> 请注意，Zanblog并不支持低于IE8的浏览器，为了获得最佳效果，请下载最新的浏览器，推荐下载 <a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank"><i class="fa fa-compass"></i> Chrome</a> </div>
+        <div class="well fade in">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          欢迎使用由 <a target="_blank" href="http://www.yeahzan.com/">佚站互联</a> 提供的 <strong>Zanblog主题</strong>，如有问题可以查看问题板块中的内容或者加入Zanblog官方群：223133969 <i class="fa fa-smile-o"></i> </div>
+
+        <list from="$search" name="n">
+        <div class="article container well">
+          <div class="data-article hidden-xs"> <span class="month">9月</span> <span class="day">17</span> </div>
+          <!-- PC端设备文章属性 -->
+          <section class="visible-md visible-lg">
+            <div class="title-article">
+              <h1><a href="#" title="{$n['title']}"> {$n['title']} </a></h1>
+            </div>
+            <div class="tag-article container"> <span class="label label-zan"><i class="fa fa-tags"></i> <a href="#" title="{$n['name']}" rel="category tag">{$n['name']}</a></span> <span class="label label-zan"><i class="fa fa-user"></i> <a href="#" title="{$n['username']}" rel="author">{$n['username']}</a></span> <span class="label label-zan"><i class="fa fa-eye"></i> {$n['click']}人</span> </div>
+            <div class="content-article">
+              <figure class="thumbnail"><a href="#"><img width="730" height="300" src="__ROOT__/uploads/2013/09/car_7-730x300.jpg" class="attachment-730x300 wp-post-image" alt="{$n['title']}" title="{$n['title']}" /></a></figure>
+              <div class="alert alert-zan"> {$n['content']}</div>
+            </div>
+            <a class="btn btn-danger pull-right read-more" href="#"  title="详细阅读 {$n['title']}">تولۇق مەزمۇنى <span class="badge"><span class="ds-thread-count" data-thread-key="523" data-replace="1">15</span></span></a> </section>
+          <!-- PC端设备文章属性 --> 
+          <!-- 移动端设备文章属性 -->
+          <section class="visible-xs  visible-sm">
+            <div class="title-article">
+              <h4><a href="#" title="{$n['title']}"> {$n['title']} </a></h4>
+            </div>
+            <p> <i class="fa fa-calendar"></i> 09-17 <i class="fa fa-eye"></i> {$n['click']}人 </p>
+            <div class="content-article">
+              <figure class="thumbnail"><a href="#"><img width="730" height="300" src="__ROOT__/uploads/2013/09/car_7-730x300.jpg" class="attachment-730x300 wp-post-image" alt="{$n['title']}" title="{$n['title']}" /></a></figure>
+              <div class="alert alert-zan"> {$n['content']} </div>
+            </div>
+            <a class="btn btn-danger pull-right read-more btn-block" href="#"  title="详细阅读 {$n['title']}">تولۇق مەزمۇنى <span class="badge"><span class="ds-thread-count" data-thread-key="523" data-replace="1">15</span></span></a> </section>
+          <!-- 移动端设备文章属性 --> 
+        </div>
+        </list>
+        
+      </section>
+      <load file="Common/sidebar.html" />
+      <div class="col-md-8"><a id='load-more' class='btn btn-zan btn-block' load-data='努力加载中...' href='http://www.yeahzan.com/zanblog/page/2'><i></i>
+        <attr>加载更多</attr>
+        </a></div>
+    </section>
+  </div>
+</section>
+<load file="Common/footer.html" />
+</body>
+</html>

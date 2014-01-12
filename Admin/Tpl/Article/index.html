@@ -1,0 +1,118 @@
+<load file="Common/head.html" />
+<link href="__PUBLIC__/css/style_order_vague.css" rel="stylesheet" type="text/css" />
+<!-- Article mainNav end-->
+<div class="umian">
+  <div class="crumbs"> 当前位置：&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" class="linkblue">我的可播</a>&nbsp;&gt;&nbsp;<a href="javascript:void(0);" class="linkblue">订单中心</a>&nbsp;&gt;&nbsp;<span class="fontbold fontcorlor40">我的订单</span></div>
+  <div class="cmain">
+    <div class="clear"></div>
+    <div class="cleft">
+      <div class="lefttop"> <span><a href="javascript:void(0);"><img src="__PUBLIC__/images/umycoobooz.gif" /></a></span> <span><img src="__PUBLIC__/images/umyline.gif" /></span> </div>
+      <div class="leftmenu">
+        <div class="usrmes"> <img src="__PUBLIC__/images/none.jpg" /> <span>您好，
+          keysarjan <a href="javascript:logout2();" class="linkblue">[安全退出]</a></span>
+          <div class="clear"></div>
+        </div>
+        <div class="menlist">
+          <ul class="ul01">
+            <li class="leftmenu">
+              <p class="leftmenu01"><a href="javascript:void(0);">账户中心</a></p>
+              <ul style="display:none">
+                <div ><span><img src="__PUBLIC__/images/uico11.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/user!touchInfo.do">基本资料</a></div>
+                <div ><span><img src="__PUBLIC__/images/uico12.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/user!linkmanInfo.do">联系信息</a></div>
+                <div ><span><img src="__PUBLIC__/images/uico13.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/user!securitySetup.do">安全设置</a></div>
+                <div ><span><img src="__PUBLIC__/images/uico14.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/user!aptitude.do">资质证明</a></div>
+              </ul>
+            </li>
+            <li class="leftmenu">
+              <p class="leftmenu02"><a href="javascript:void(0);">屏幕管理</a></p>
+              <ul style="display:none">
+                <div><span><img src="__PUBLIC__/images/uico21.gif" align="absmiddle" /></span><a href="javascript:void(0);">屏幕管理</a></div>
+                <div><span><img src="__PUBLIC__/images/uico22.gif" align="absmiddle" /></span><a href="javascript:void(0);">默认广告列表</a></div>
+              </ul>
+            </li>
+            <li class="leftmenu">
+              <p class="leftmenu03"><a href="javascript:void(0);">订单管理</a></p>
+              <ul  style="display:block;">
+                <div  class="on_list"><span><img src="__PUBLIC__/images/uico31.gif" align="absmiddle" /></span><a href="myOrder.html">我的订单</a><!-- <i class="listtip02">12</i> --></div>
+                <div  ><span><img src="__PUBLIC__/images/ucio33.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/advert!advertList.do?pager.status=userid&pager.keywords=2407">广告管理</a></div>
+                <div  ><span><img src="__PUBLIC__/images/uico34.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/myFavority.html">我的收藏</a></div>
+                <div  ><span><img src="__PUBLIC__/images/uico35.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/coupon!couponList.do">我的优惠</a></div>
+              </ul>
+            </li>
+            <li class="leftmenu">
+              <p class="leftmenu04"><a href="javascript:void(0);">财务管理</a></p>
+              <ul style="display:none">
+                <div ><span><img src="__PUBLIC__/images/uico41.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/finance!balance.do">账户余额</a></div>
+                <div ><span><img src="__PUBLIC__/images/uico43.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/finance!record.do">消费记录</a></div>
+                <div ><span><img src="__PUBLIC__/images/uico44.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/invoice.html">发票信息</a></div>
+                <div ><span><img src="__PUBLIC__/images/uico44.gif" align="absmiddle" /></span><a href="http://www.coobooz.com/custom/finance!adMonthly.do">投放月报表</a></div>
+              </ul>
+            </li>
+            <li class="leftmenu">
+              <p class="leftmenu05"><a href="javascript:void(0);">消息中心</a></p>
+              <ul style="display:none">
+                <div><span><img src="__PUBLIC__/images/uico41.gif" align="absmiddle" /></span><a href="javascript:void(0);">消息中心</a><i class="listtip01">12</i></div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cright">
+      <div class="righttop"><img src="__PUBLIC__/images/myd_01.gif" /></div>
+      <div class="rightnav bornone"></div>
+      <div class="crightbox">
+        <form name="searchOrderlist" id="searchOrderlist" method="post" action="/custom/user!orderManager.do" onSubmit="return checkSearchForm();">
+          <table width="830" border="0" cellspacing="5" cellpadding="0" class="tablebk tablebgf7">
+            <tr>
+              <td height="38">订单号：
+                <input type="text" name="orderID" class="input01 width155" id="orderID_id" value=""  /></td>
+              <td> 订单状态：
+                <select name="status" id="status_id" class="input01 width155">
+                  <option value="">不限</option>
+                  <option value="0"  >待付款</option>
+                  <option value="1"  >已付款</option>
+                </select></td>
+              <td><input type="submit" name="button" id="button" value="搜索" class="but01" /></td>
+            </tr>
+          </table>
+        </form>
+        <form>
+          <table width="830" border="0" cellspacing="0" cellpadding="0" class="tablebk2 margintop20">
+            <tr class="tabletop">
+              <td width="7">&nbsp;</td>
+              <!--<td align="center">投放类型</td>-->
+              <td align="center">订单编号</td>
+              <td align="center">下单日期</td>
+              <td align="center">广告数（个）</td>
+              <td align="center">广告总时长（秒）</td>
+              <td align="center">播放次数（次） </td>
+              <td align="center">订单金额（元）</td>
+              <td align="center">订单状态</td>
+              <td align="center">操作</td>
+              <td width="7">&nbsp;</td>
+            </tr>
+          </table>
+          <div class="pagebox margintop20">
+            <ul class="listpage01">
+              <li><a href="javascript:void(0);" id="on_listpage">1</a></li>
+              <li><a href="javascript:void(0);">2</a></li>
+              <li><a href="javascript:void(0);">3</a></li>
+              <li><a href="javascript:void(0);">4</a></li>
+              <li><a href="javascript:void(0);">5</a></li>
+              <li>...</li>
+              <li><a href="javascript:void(0);">37</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </form>
+        <div class="clear"></div>
+        <div class="height200"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="footer"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<header id="zan-header" class="navbar navbar-inverse bs-docs-nav">
+  <nav class="container"> <a href="http://www.qeyser.biz/qblog">
+    <div class="navbar-brand"></div>
+    </a>
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="fa fa-reorder fa-lg"></span> </button>
+    <div class="navbar-collapse bs-navbar-collapse collapse">
+      <ul id="menu-navbar" class="nav navbar-nav">
+        <li id="menu-item-100" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-100"><a title="Qblog Bash bet" href="__APP__"> باش بەت <i class="fa fa-home"></i></a></li>
+        <list from="$cate" name="n">
+        <li id="menu-item-1{$key}" class="dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-1{$key}"><a> {$n['name']} <i class="fa fa-cog"></i></a>
+          <ul class="dropdown-menu">
+          <list from="$n['child']" name="k">
+              <li id="menu-item-2{$key}" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2{$key}"><a target="_blank" href="#">{$k['name']}</a></li>
+          </list>
+          </ul>
+        </li>
+      </list>
+      </ul>
+      <div class="search visible-lg">
+        <div class="textwidget"></div>
+      </div>
+      <div class="search visible-lg">
+        <form method="post" id="searchform" class="form-inline" action="{|U('Index/search')}">
+          <input class="form-control" type="text" name="s" id="s" placeholder="搜索..." />
+          <button type="submit" class="btn btn-danger btn-small" name="submit" ><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div id="if-fixed" class="pull-right visible-lg visible-md"> <i class="fa fa-thumb-tack"></i>
+    <input type="checkbox">
+  </div>
+</header>

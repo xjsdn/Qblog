@@ -1,0 +1,98 @@
+<load file="Common/head.html" />
+<body class="home blog">
+<load file="Common/header.html" />
+<section id="zan-bodyer">
+  <div class="container">
+    <section class="row">
+      <section id="mainstay" class="col-md-8">
+        <div id="ie-warning" class="alert alert-danger fade in">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <i class="fa fa-warning"></i> 请注意，Zanblog并不支持低于IE8的浏览器，为了获得最佳效果，请下载最新的浏览器，推荐下载 <a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank"><i class="fa fa-compass"></i> Chrome</a> </div>
+        <div class="well fade in">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          欢迎使用由 <a target="_blank" href="http://www.yeahzan.com/">佚站互联</a> 提供的 <strong>Zanblog主题</strong>，如有问题可以查看问题板块中的内容或者加入Zanblog官方群：223133969 <i class="fa fa-smile-o"></i> </div>
+        <!-- 幻灯片-->
+        <figure class="slide"> 
+          <!-- meta slider -->
+          <div style="max-width: 750px;" class="metaslider metaslider-flex metaslider-411 ml-slider">
+            <style type="text/css">
+        @import url('__PUBLIC__/ml-slider/metaslider/public.css');
+        @import url('__PUBLIC__/ml-slider/sliders/flexslider/flexslider.css');
+    </style>
+            <div id="metaslider_container_411">
+              <div id="metaslider_411" class="flexslider">
+                <ul class="slides">
+                  <li style="display: none;"><a href="#" target="_self"><img src="__ROOT__/uploads/2013/10/banner_206.jpg" height="300" width="750" class="slider-411 slide-705" /></a></li>
+                  <li style="display: none;"><a href="#" target="_self"><img src="__ROOT__/uploads/2013/09/banner_zanui.jpg" height="300" width="750" class="slider-411 slide-550" /></a></li>
+                </ul>
+              </div>
+            </div>
+            <script type="text/javascript">
+        var metaslider_411 = function($) {
+            $('#metaslider_411').flexslider({ 
+                slideshowSpeed:3000,
+                animation:"slide",
+                controlNav:false,
+                directionNav:true,
+                pauseOnHover:true,
+                direction:"vertical",
+                reverse:false,
+                animationSpeed:600,
+                prevText:"<",
+                nextText:">",
+                easing:"easeOutExpo",
+                slideshow:true,
+                useCSS:false
+            });
+        };
+        var timer_metaslider_411 = function() {
+            var slider = !window.jQuery ? window.setTimeout(timer_metaslider_411, 100) : !jQuery.isReady ? window.setTimeout(timer_metaslider_411, 100) : metaslider_411(window.jQuery);
+        };
+        timer_metaslider_411();
+    </script> 
+          </div>
+          <!--// meta slider-->
+        </figure>
+        
+        <!-- 幻灯片-->
+      <list from="$blog" name="n">
+        <div class="article container well">
+          <div class="data-article hidden-xs"> <span class="month">9月</span> <span class="day">17</span> </div>
+          <!-- PC端设备文章属性 -->
+          <section class="visible-md visible-lg">
+            <div class="title-article">
+              <h1><a href="#" title="{$n['title']}"> {$n['title']} </a></h1>
+            </div>
+            <div class="tag-article container"> <span class="label label-zan"><i class="fa fa-tags"></i> <a href="#" title="{$n['name']}" rel="category tag">{$n['name']}</a></span> <span class="label label-zan"><i class="fa fa-user"></i> <a href="#" title="{$n['username']}" rel="author">{$n['username']}</a></span> <span class="label label-zan"><i class="fa fa-eye"></i>{$n['click']}人</span> </div>
+            <div class="content-article">
+              <figure class="thumbnail"><a href="#"><img width="730" height="150" src="<empty value="{$n.thumb}">__PUBLIC__/images/nobanner.jpg<noempty/>{$n.thumb}</empty>" class="wp-post-image" alt="{$n['title']}" title="{$n['title']}" /></a></figure>
+              <div class="alert alert-zan"> {$n['content']}</div>
+            </div>
+            <a class="btn btn-danger pull-right read-more" href="#"  title="详细阅读 {$n['title']}">تولۇق مەزمۇنى <span class="badge"><span class="ds-thread-count" data-thread-key="523" data-replace="1">15</span></span></a> </section>
+          <!-- PC端设备文章属性 --> 
+          <!-- 移动端设备文章属性 -->
+          <section class="visible-xs  visible-sm">
+            <div class="title-article">
+              <h4><a href="#" title="{$n['title']}"> {$n['title']} </a></h4>
+            </div>
+            <p> <i class="fa fa-calendar"></i> 09-17 <i class="fa fa-eye"></i> {$n['click']}人 </p>
+            <div class="content-article">
+              <figure class="thumbnail"><a href="#"><img width="730" height="150" src="<empty value="{$n.thumb}">__PUBLIC__/images/nobanner.jpg<noempty/>{$n.thumb}</empty>" class="wp-post-image" alt="{$n['title']}" title="{$n['title']}" /></a></figure>
+              <div class="alert alert-zan"> {$n['content']} </div>
+            </div>
+            <a class="btn btn-danger pull-right read-more btn-block" href="#"  title="详细阅读 {$n['title']}">تولۇق مەزمۇنى <span class="badge"><span class="ds-thread-count" data-thread-key="523" data-replace="1">15</span></span></a> </section>
+          <!-- 移动端设备文章属性 --> 
+        </div>
+        </list>
+
+      </section>
+      <load file="Common/sidebar.html" />
+      <div class="col-md-8 pagination pagination-lg">
+          {$page}
+      </div>
+    </section>
+  </div>
+</section>
+<load file="Common/footer.html" />
+</body>
+</html>

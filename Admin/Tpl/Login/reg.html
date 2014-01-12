@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会员注册</title>
+</head>
+<link type="text/css" href="__PUBLIC__/css/login.css" rel="stylesheet"  />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<style>
+.checkVal_C {
+	display: none;
+}
+.code {
+	background-image: url(__PUBLIC__/images/code.jpg);
+	font-family: Arial;
+	font-style: italic;
+	color: blue;
+	border: 0;
+	padding: 2px 3px;
+	letter-spacing: 3px;
+	font-weight: bolder;
+	margin-top: 13px;
+}
+.unchanged {
+	border: 0;
+}
+</style>
+<body>
+<div class="l_warp">
+<div class="l_main"> <a href="http://www.coobooz.com/" target="_blank"><img src="__PUBLIC__/images/logo_l.png" class="l_logo" title="可播网"/></a>
+  <p class="lp_5"></p>
+  <form name="register_form_d" id="register_form_d" method="post" action="/custom/index!register.do" onSubmit="return check_fomr_submit();" >
+    <input type="hidden" name="isRegister" id="is_register_id" value="1" />
+    <div class="login_btn login_btn2"><span class="font3s">用户名</span>
+      <input onblur="return checkUser();" type="text" name="userLoginInfo.userName" id="userLoginInfo_userName" class="btn_all" value="" maxlength="28" />
+      <div id="yesthis_user_name" class="yesthis" style="display:none;"></div>
+    </div>
+    <p> <span id="user_name_span"></span> </p>
+    <div class="login_btn login_btn2"><span class="font2s">邮箱</span>
+      <input type="text" name="userLoginInfo.email" id="userLoginInfo_email" onblur="return checkEmail();" class="btn_all" value="" maxlength="28" />
+      <div id="yesthis_user_email" class="yesthis" style="display:none;"></div>
+    </div>
+    <p> <span id="user_email_span"></span> </p>
+    <div class="login_btn login_btn2"><span class="font2s">密码</span>
+      <input name="userLoginInfo.userPwd" id="userLoginInfo_userPwd" onblur="return checkPassWord();" type="password" class="btn_all" maxlength="28" />
+      <div id="yesthis_user_password" class="yesthis" style="display:none;"></div>
+    </div>
+    <p> <span id="user_password_span"></span> </p>
+    <div class="login_btn login_btn2">确认密码
+      <input name="userLoginInfo.userPwd2" id="userLoginInfo_userPwd2" onblur="return checkPassWord2();" type="password" class="btn_all" maxlength="28" />
+      <div id="yesthis_user_password2" class="yesthis" style="display:none;"></div>
+    </div>
+    <p> <span id="user_password_span2"></span> </p>
+    <div class="login_btn login_btn2"><span class="font3s">验证码</span>
+      <input name="verificationcode" id="verification_code"  onblur="return checkVerificationCode();" type="text" class="btn_all btn_all2" value="" maxlength="6" />
+      <div id="yesthis_user_verificationcode" style="display:none;" class="yesthis yesyzm"></div>
+      <div class="yzm">
+        <div class="yzmpic">
+          <input type="text" readonly="readonly" id="checkCode" class="unchanged" style="width: 60px"  />
+        </div>
+        <div class="yzmnu">看不清，<a href="javascript:void(0);" onclick="createCode()">刷新</a></div>
+      </div>
+    </div>
+    <p> <span id="user_verificationcode_span"></span> </p>
+    <div class="login_btn loginx">
+      <input type="checkbox" name="quitBut" id="quitButID" value="1" checked="checked" />
+      同意可播网用户<a href="http://www.coobooz.com/contract.html" target="_blank">服务协议 </a></div>
+    <input name="button" type="submit"  class="but_d" id="button" value="注册" />
+  </form>
+  <p class="lp_4"> <a href="http://www.coobooz.com/index.html">可播首页</a> |<a href="http://www.coobooz.com/broadCastOnline.html">在线投播</a> |<a href="http://zm.coobooz.com/member.php?mod=logging&action=login&referer=http%3A%2F%2Fzm.coobooz.com%2Fforum.php">置换空间</a> </p>
+</div>
+<div class="footer_l"> Copyright©&nbsp;2012&nbsp;上海亮钻广告传媒有限公司,ALL RIGHTS RESERVED 沪ICP备12008382号 </div>
+</body>
+</html>
