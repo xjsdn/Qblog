@@ -6,10 +6,10 @@
  */
 class BlogModel extends ViewModel{
     public $view = array(
-            'cate' => array(
+            'category' => array(
                 'type' => INNER_JOIN,
-                'field' => 'cid,name',
-                'on'    => 'cate.cid=blog.cid'
+                'field' => 'id,cname',
+                'on'    => 'category.id=blog.cid'
                 ),
             'user' => array(
                 'type' => LEFT_JOIN,

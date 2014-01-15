@@ -10,12 +10,12 @@ class CommonControl extends Control{
 	 * Tizimlik
 	 */
 	public function menu(){
-		$db = M('Cate');
-		$cate = $db->where(array('pid'=>100))->order('sort')->select();
+		$db = M('Category');
+		$cate = $db->where(array('pid'=>0))->order('sort')->select();
     	foreach ($cate as $k => $v) {
-    		$cate[$k]['child'] = $db->where(array('pid'=>$v['cid']))->select();
+    		$cate[$k]['child'] = $db->where(array('pid'=>$v['id']))->select();
     	}
-    	$this->assign('cate', $cate);
+    	$this->assign('category', $cate);
 	}
 
 	/**

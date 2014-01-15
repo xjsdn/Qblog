@@ -6,11 +6,11 @@
     <div class="navbar-collapse bs-navbar-collapse collapse">
       <ul id="menu-navbar" class="nav navbar-nav">
         <li id="menu-item-100" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-100"><a title="Qblog Bash bet" href="__APP__"> باش بەت <i class="fa fa-home"></i></a></li>
-        <list from="$cate" name="n">
-        <li id="menu-item-1{$key}" class="dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-1{$key}"><a> {$n['name']} <i class="fa fa-cog"></i></a>
+        <list from="$category" name="n">
+        <li id="menu-item-1{$key}" class="dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-1{$key}"><a> {$n['cname']} <i class="fa fa-cog"></i></a>
           <ul class="dropdown-menu">
           <list from="$n['child']" name="k">
-              <li id="menu-item-2{$key}" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2{$key}"><a target="_blank" href="#">{$k['name']}</a></li>
+              <li id="menu-item-2{$key}" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2{$key}"><a target="_blank" href="#">{$k['cname']}</a></li>
           </list>
           </ul>
         </li>

@@ -273,6 +273,7 @@ div.search input[type="text"] {
 	font-size: 28px;
 	margin: 0 auto;
 	text-align:center;
+	direction: rtl;
 }
 
 .title-article h1 a{

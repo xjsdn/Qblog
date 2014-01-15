@@ -9,7 +9,7 @@ class IndexControl extends CommonControl{
      * Home
      */
     public function index(){
-        $field = 'bid,title,content,thumb,time,bid,click,Cate.cid,name,Blog.uid,username';
+        $field = 'bid,title,content,thumb,time,username,click,cid,cname';
         $where = array(
             'del'==0
             );

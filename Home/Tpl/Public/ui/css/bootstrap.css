@@ -306,7 +306,7 @@ html {
 
 body {
   font-family: "Ukij Tuz Tom","Alpida Unicode System","Alkatip Tor","Alp Ekran","Microsoft Uighur","Microsoft Yahei", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.428571429;
   color: #3d4450;
   background-color: #f1f2f3;
@@ -726,6 +726,7 @@ pre {
   background-color: #f5f5f5;
   border: 1px solid #cccccc;
   border-radius: 4px;
+  direction: ltr;
 }
 
 pre.prettyprint {
@@ -5095,6 +5096,7 @@ a.thumbnail:focus {
   border: 1px solid transparent;
   border-radius: 4px;
   overflow: auto;
+  direction: rtl;
 }
 
 .alert h4 {
