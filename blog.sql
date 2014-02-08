@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS `qblog_comment` (
   `time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'time',
   `content` varchar(255) NOT NULL DEFAULT '' COMMENT 'content',
   `blogid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'blog id',
-  PRIMARY KEY (`coid`),
+  PRIMARY KEY (`coid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Comments' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
